@@ -13,13 +13,13 @@ git clone https://github.com/impatrq/rpizerow-labo-env.git
 3- Navegar hasta el repositorio y crear un entorno virtual como:
 
 ```bash
-venv env
+python -m venv .rpizerow-env
 ```
 
 4- Activar el entorno virtual e instalar los requisitos:
 
 ```bash
-source env/bin/activate
+source .rpizerow-env/bin/activate
 python -m pip install -r requirements.txt
 ```
 
