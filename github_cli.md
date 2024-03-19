@@ -1,4 +1,4 @@
-# push remoto
+# GitHub CLI
 
 Estas son algunas instrucciones para poder pushear a un repo personal desde la RPiZeroW.
 
