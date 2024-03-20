@@ -20,7 +20,7 @@ Con esto nos logueamos con el usuario rpizerow en la RPiZeroW 01. **La computado
 git clone https://github.com/USERNAME/rpizerow-labo-env.git
 ```
 
-Reemplazando USERNAME por el que corresponda.
+Reemplazando _USERNAME_ por el que corresponda.
 
 5- Navegar hasta el repositorio con _cd_ y crear un entorno virtual con:
 
@@ -36,7 +36,15 @@ Este comando en particular toma un tiempo en resolverse.
 source .rpizerow-env/bin/activate && python -m pip install -r requirements.txt
 ```
 
-7- Happy coding!
+7- Resolver los ejercicios propuestos dentro del directorio correspondiente usando el editor `nano`. Para abrir nano y crear un archivo pueden escribir:
+
+```bash
+nano FILENAME
+```
+
+Reemplazando _FILENAME_ por el nombre del archivo apropiado. Pueden encontrar informacion sobre los comandos basicos de nano en este [link](https://www.cheatsheet.wtf/Nano/).
+
+8- Happy coding!
 
 ## GitHub CLI
 
