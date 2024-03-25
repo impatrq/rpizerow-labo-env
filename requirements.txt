@@ -4,3 +4,4 @@ raspberrypi-tm1637==1.3.7
 ADS1x15-ADC==1.2.2
 Adafruit-BMP==1.5.4
 requests==2.31.0
+plotille==5.0.0
