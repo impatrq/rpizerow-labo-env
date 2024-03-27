@@ -2,41 +2,61 @@
 
 ## Instrucciones
 
-1- Si no lo hemos hecho ya, hacer un fork de este repositorio para que tengamos una copia bajo nuestro usuario.
+1- Si no lo hemos hecho ya, hacer un [fork](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) de este repositorio para que tengamos una copia bajo nuestro usuario.
 
-2- Iniciar sesion en la RPiZeroW con SSH a traves de Putty o shell. El usuario y clave son `rpizerow`. En cuanto al hostname, vamos a acceder con rpizerow-0x.local donde x es el numero de la RPiZeroW que queremos usar. Ejemplo para SSH desde shell:
+2- Asegurarse de que la computadora desde donde se van a conectar esté en la **Red Alumnos**.
+
+3- Iniciar sesion en la RPiZeroW con SSH a traves de Putty o shell. El usuario y clave son `rpizerow`. En cuanto al hostname, vamos a acceder con rpizerow-0x.local donde x es el numero de la RPiZeroW que queremos usar. 
+
+Ejemplo para SSH desde shell:
 
 ```bash
 ssh rpizerow@rpizerow-01.local
 ```
 
-Con esto nos logueamos con el usuario rpizerow en la RPiZeroW 01. **La computadora o dispositivo desde donde se conecten tiene que estar conectada a Red Alumnos**.
+Si usan Putty, solo hace falta escribir en el campo Host Name:
 
-3- Crear dentro del home de rpizerow un directorio con nuestro apellido con el comando _mkdir_.
+```
+rpizerow@rpizerow-01.local
+```
 
-4- Entrar al directorio personal con el comando _cd_ y clonar el fork de este repositorio como:
+Con esto nos logueamos con el usuario rpizerow en la RPiZeroW 01.
+
+4- Crear dentro del home de rpizerow un directorio con nuestro apellido con el comando _mkdir_ y luego entrar al mismo. Ejemplo:
+
+```bash
+mkdir gonzalez && cd gonzalez
+```
+
+5- Clonar el fork de este repositorio con el comando a continuación reemplazando _USERNAME_ por el que corresponda.:
 
 ```bash
 git clone https://github.com/USERNAME/rpizerow-labo-env.git
 ```
 
-Reemplazando _USERNAME_ por el que corresponda.
+**Nota: si les pide autorización de usuario y contraseña de GitHub, el link al repositorio lo copiaron mal.**
 
-5- Navegar hasta el repositorio con _cd_ y crear un entorno virtual con:
+6- Navegar hasta el repositorio con _cd_ y crear un entorno virtual. Sería:
 
 ```bash
-python -m venv .rpizerow-env
+cd rpizerow-labo-env && python -m venv .rpizerow-env
 ```
 
 Este comando en particular toma un tiempo en resolverse.
 
-6- Activar el entorno virtual e instalar los requisitos:
+7- Activar el entorno virtual e instalar los requisitos:
 
 ```bash
 source .rpizerow-env/bin/activate && python -m pip install -r requirements.txt
 ```
 
-7- Resolver los ejercicios propuestos dentro del directorio correspondiente usando el editor `nano`. Para abrir nano y crear un archivo pueden escribir:
+8- Ir hasta el directorio del ejercicio a resolver. Ejemplo, si quisiera resolver el ejercicio 3 de Python haría:
+
+```bash
+cd actividades_python/ej_03
+```
+
+9- Resolver el ejercicio propuesto dentro del directorio correspondiente usando el editor `nano` para escribir el código. Para abrir nano (ya estando en el directorio que corresponda) y crear un archivo pueden escribir:
 
 ```bash
 nano FILENAME
@@ -44,7 +64,7 @@ nano FILENAME
 
 Reemplazando _FILENAME_ por el nombre del archivo apropiado. Pueden encontrar informacion sobre los comandos basicos de nano en este [link](https://www.cheatsheet.wtf/Nano/).
 
-8- Happy coding!
+10- Happy coding!
 
 ## GitHub CLI
 
