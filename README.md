@@ -1,8 +1,13 @@
 # Raspberry Pi Zero W Labo Environment
 
-## Instrucciones
+Contenidos del README:
 
-1- Si no lo hemos hecho ya, hacer un [fork](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) de este repositorio para que tengamos una copia bajo nuestro usuario.
+- [Como empezar](#como-empezar)
+- 
+
+## Como empezar
+
+1- Si no lo hemos hecho ya, hacer un [fork](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) de este repositorio para que tengamos una copia bajo nuestro usuario. Si ya hicimos un fork previamente, asegurémonos de que el fork esté [sincronizado](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) con el respositorio original. 
 
 2- Asegurarse de que la computadora desde donde se van a conectar esté en la **Red Alumnos**.
 
@@ -65,6 +70,34 @@ nano FILENAME
 Reemplazando _FILENAME_ por el nombre del archivo apropiado. Pueden encontrar informacion sobre los comandos basicos de nano en este [link](https://www.cheatsheet.wtf/Nano/).
 
 10- Happy coding!
+
+## git add, commit y push
+
+Una vez que hayamos terminado una actividad o ejercicio, tenemos que hacer los cambios en el repositorio con git para poder sincronizarlos. La lógica siempre es `git add`, `git commit`, `git push`.
+
+Cuando tenemos algún archivo nuevo o modificado, lo primero es agregarlo a git para que trackee los cambios:
+
+```bash
+git add ruta_y_nombre_de_archivo
+```
+
+Luego, vamos a tener que especificar quién somos para que quede registrado la persona que está haciendo los cambios en el repositorio con `git config`. Ejemplo:
+
+```bash
+git config user.email "gonzalez@impatrq.com" && git config user.name "Gonzalo Gonzalez"
+```
+
+Después, tenemos que hacer un commit para registrar el cambio que hicimos y proporcionar un mensaje apropiado con el tipo de cambio según el estándar de [commits convencionales](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines). Ejemplo:
+
+```bash
+git commit -m "feat: programa que prende un LED rojo con boton"
+```
+
+Cuando hayamos hecho todos los commits, vamos a seguir las instrucciones de la sección [GitHub CLI](#github-cli) para poder autorizar a la RPiZeroW para pushar a nuestro repositorio y luego hacer el push usando:
+
+```bash
+git push
+```
 
 ## GitHub CLI
 
