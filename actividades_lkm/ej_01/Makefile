@@ -26,7 +26,7 @@ clean:
 
 # Carga el modulo en el kernel
 insmod:
-	@sudo insmod nbuild/${FILE}.ko
+	@sudo insmod build/${FILE}.ko
 
 # Quita el modulo del kernel
 rmmod:
