@@ -1,4 +1,4 @@
-# ejercicio-01
+# ejercicio-02
 
 ## Consigna
 
@@ -22,16 +22,10 @@ El codigo dene estar apropiadamente comentado.
 
 ## Instrucciones especiales
 
-- Cambiar el nombre del archivo [apellido_nombre_ej02.c](apellido_nombre_ej02.c) al que corresponda para el que este resolviendo el ejercicio. Se puede usar el comando:
-
-```bash
-mv apellido_nombre_ej02.c gonzalez_gonzalo_ej02.c
-```
-
-- Cambiar el valor de la variable `FILE` en el [Makefile](Makefile) poniendo el apellido y nombre que corresponda. Para el caso anterior:
+- Cambiar el valor de la variable `MODN` en el [Makefile](Makefile) poniendo el apellido y nombre que corresponda. Por ejemplo:
 
 ```Makefile
-FILE := gonzalez_gonzalo_ej02
+MODN := gonzalez_gonzalo_ej02
 ```
 
 - Para compilar, cargar el modulo, retirarlo, podemos usar las reglas descritas en el [Makefile](Makefile). Podemos usar el comando:
