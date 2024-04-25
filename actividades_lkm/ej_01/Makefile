@@ -31,3 +31,7 @@ insmod:
 # Quita el modulo del kernel
 rmmod:
 	@sudo rmmod ${FILE}
+
+# Miro mensajes del kernel
+dmesg:
+	@dmesg | grep ${FILE}
