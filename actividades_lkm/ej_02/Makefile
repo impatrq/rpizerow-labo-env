@@ -1,5 +1,7 @@
-# Reemplazar por apellido y nombre en minuscula (dejar el ej02)
-FILE := apellido_nombre_ej02
+# Nombre del archivo
+FILE := main
+# Nombre del modulo (reemplazar nombre y apellido)
+MODN := apellido_nombre_ej02
 # Directorio para archivos de compilacion
 MDIR := $(PWD)/build
 # Directorio donde estan los modulos del kernel
@@ -10,13 +12,11 @@ obj-m += ${FILE}.o
 
 # Regla de compilacion por defecto
 all:
-	# Intenta crear el directorio build
 	@mkdir -p build;	\
-	# Copia el Makefile y codigo fuente
-	@cp -f ${FILE}.c Makefile ${MDIR};	\
+	cp -f ${FILE}.c Makefile ${MDIR};	\
 	cd build;	\
-	# Compila
-	make -C ${KDIR} M=${MDIR} modules
+	make -C ${KDIR} M=${MDIR} modules;	\
+	cp ${FILE}.ko ${MODN}.ko
 
 # Regla para limpiar los archivos compilados
 clean:
@@ -26,15 +26,15 @@ clean:
 
 # Carga el modulo en el kernel
 insmod:
-	@sudo insmod build/${FILE}.ko
+	@sudo insmod build/${MODN}.ko
 
 # Quita el modulo del kernel
 rmmod:
-	@sudo rmmod ${FILE}
+	@sudo rmmod ${MODN}
 
 # Miro mensajes del kernel
 dmesg:
-	@dmesg -wHT | grep ${FILE}
+	@dmesg -wHT | grep ${MODN}
 
 # Ayuda con comandos
 help:
