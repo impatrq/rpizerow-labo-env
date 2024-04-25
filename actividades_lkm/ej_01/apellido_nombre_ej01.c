@@ -27,4 +27,4 @@ module_exit(ej01_module_exit);
 // Informacion del modulo (completar lo que corresponda)
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("");
-MODULE_DESCRIPTION("")
+MODULE_DESCRIPTION("");
