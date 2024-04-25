@@ -34,7 +34,7 @@ rmmod:
 
 # Miro mensajes del kernel
 dmesg:
-	@dmesg | grep ${FILE}
+	@dmesg -wHT | grep ${FILE}
 
 # Ayuda con comandos
 help:
