@@ -16,7 +16,7 @@ gonzalez_gonzalo_ej01: Chau desde el kernel!
 
 Reemplazando el apellido por el correspondiente.
 
-## 
+## Instrucciones especiales
 
 - Cambiar el nombre del archivo [apellido_nombre.c](apellido_nombre.c) al que corresponda para el que este resolviendo el ejercicio. Se puede usar el comando:
 
@@ -37,3 +37,5 @@ make help
 ```
 
 Para ver que opciones estan disponibles.
+
+- Cuando se haya cumplido con el objetivo, seguir los estandares para hacer un commit y push de los cambios. 
