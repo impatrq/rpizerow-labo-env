@@ -8,15 +8,15 @@ MDIR := $(PWD)/build
 KDIR := /lib/modules/$(shell uname -r)/build
 
 # Archivo objeto para agregar
-obj-m += ${FILE}.o
+obj-m += ${MODN}.o
+${MODN}-objs := ${FILE}.o
 
 # Regla de compilacion por defecto
 all:
 	@mkdir -p build;	\
 	cp -f ${FILE}.c Makefile ${MDIR};	\
 	cd build;	\
-	make -C ${KDIR} M=${MDIR} modules;	\
-	cp ${FILE}.ko ${MODN}.ko
+	make -C ${KDIR} M=${MDIR} modules	\
 
 # Regla para limpiar los archivos compilados
 clean:
