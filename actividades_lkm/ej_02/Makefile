@@ -1,0 +1,48 @@
+# Reemplazar por apellido y nombre en minuscula (dejar el ej02)
+FILE := apellido_nombre_ej02
+# Directorio para archivos de compilacion
+MDIR := $(PWD)/build
+# Directorio donde estan los modulos del kernel
+KDIR := /lib/modules/$(shell uname -r)/build
+
+# Archivo objeto para agregar
+obj-m += ${FILE}.o
+
+# Regla de compilacion por defecto
+all:
+	# Intenta crear el directorio build
+	@mkdir -p build;	\
+	# Copia el Makefile y codigo fuente
+	@cp -f ${FILE}.c Makefile ${MDIR};	\
+	cd build;	\
+	# Compila
+	make -C ${KDIR} M=${MDIR} modules
+
+# Regla para limpiar los archivos compilados
+clean:
+	@cd build;	\
+	make -C ${KDIR} M=${MDIR} clean;	\
+	cd .. && rm -rf build
+
+# Carga el modulo en el kernel
+insmod:
+	@sudo insmod build/${FILE}.ko
+
+# Quita el modulo del kernel
+rmmod:
+	@sudo rmmod ${FILE}
+
+# Miro mensajes del kernel
+dmesg:
+	@dmesg | grep ${FILE}
+
+# Ayuda con comandos
+help:
+	@echo "RPiZeroW Labo Env - Makefile v1.0"
+	@echo ""
+	@echo "-all: compila el programa (opcion por defecto)"
+	@echo "-clean: limpia los archivos compilados"
+	@echo "-insmod: carga el modulo en el kernel"
+	@echo "-rmmod: retira el modulo del kernel"
+	@echo "-dmesg: muestra los mensajes del kernel generados por este modulo"
+	@echo "-help: muestra estos mensajes de ayuda"
