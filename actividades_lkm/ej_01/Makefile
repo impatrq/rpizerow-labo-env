@@ -35,3 +35,14 @@ rmmod:
 # Miro mensajes del kernel
 dmesg:
 	@dmesg | grep ${FILE}
+
+# Ayuda con comandos
+help:
+	@echo "RPiZeroW Labo Env - Makefile v1.0"
+	@echo ""
+	@echo "-all: compila el programa (opcion por defecto)"
+	@echo "-clean: limpia los archivos compilados"
+	@echo "-insmod: carga el modulo en el kernel"
+	@echo "-rmmod: retira el modulo del kernel"
+	@echo "-dmesg: muestra los mensajes del kernel generados por este modulo"
+	@echo "-help: muestra estos mensajes de ayuda"
