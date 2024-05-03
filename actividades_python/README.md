@@ -34,9 +34,9 @@ Pueden encontrar informacion sobre los comandos basicos de nano en este [link](h
 
 5- Para salir de nano usar la combinacion de teclas:
 
-    - `Ctrl + X` para salir
-    - `y` para decirle de guardar cambios
-    - `Enter` para aceptar
+- `Ctrl + X` para salir
+- `y` para decirle de guardar cambios
+- `Enter` para aceptar
 
 6- Para probar el programa, ejecutarlo corriendo el comando:
 
@@ -49,3 +49,13 @@ python main.py
 8- Realizar los commits apropiados segun los estandares convencionales que pueden ver [aqui](https://www.conventionalcommits.org/en/v1.0.0/).
 
 9- Pushear los cambios al repositorio personal siguiendo los pasos de la seccion de `git add, commit y push` del [README](../README.md).
+
+## Documentación sobre modulos de Python
+
+Las bibliotecas de Python de las que vamos a hacer uso pueden encontrarse en el [requirements.txt](requirements.txt). Aqui dejamos links a la documentacion o repositorio de cada una de las bibliotecas:
+
+- [gpiozero](https://pypi.org/project/gpiozero/) para perifericos de la RPiZeroW
+- [raspberrypi-tm1637](https://pypi.org/project/raspberrypi-tm1637/) para controlar el display 7 segmentos
+- [ADS1x15-ADC](https://github.com/chandrawi/ADS1x15-ADC) para usar el ADC externo
+- [Adafruit-BMP](https://github.com/adafruit/Adafruit_Python_BMP) para usar el BMP180
+- [requests](https://pypi.org/project/requests/) para hacer consultas por HTTP
