@@ -5,7 +5,6 @@ Contenidos del README:
 - [Como empezar](#como-empezar)
 - [git add, commit, push](#git-add-commit-y-push)
 - [Documentación sobre placa de desarrollo](#documentación-sobre-placa-de-desarrollo)
-- [Documentación sobre modulos de Python](#documentación-sobre-modulos-de-python)
 
 ## Como empezar
 
@@ -127,13 +126,3 @@ gh auth logout
 ## Documentación sobre placa de desarrollo
 
 En la medida que se desarrollen las distintas actividades, va a ser necesario informacion del hardware que estamos usando. Pueden encontrar esquematico, PCB y otros documentos en este [repositorio](https://github.com/impatrq/rpizerow-labo-kit).
-
-## Documentación sobre modulos de Python
-
-Las bibliotecas de Python de las que vamos a hacer uso pueden encontrarse en el [requirements.txt](requirements.txt). Aqui dejamos links a la documentacion o repositorio de cada una de las bibliotecas:
-
-- [gpiozero](https://pypi.org/project/gpiozero/) para perifericos de la RPiZeroW
-- [raspberrypi-tm1637](https://pypi.org/project/raspberrypi-tm1637/) para controlar el display 7 segmentos
-- [ADS1x15-ADC](https://github.com/chandrawi/ADS1x15-ADC) para usar el ADC externo
-- [Adafruit-BMP](https://github.com/adafruit/Adafruit_Python_BMP) para usar el BMP180
-- [requests](https://pypi.org/project/requests/) para hacer consultas por HTTP
