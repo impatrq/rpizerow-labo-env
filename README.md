@@ -4,7 +4,6 @@ Contenidos del README:
 
 - [Como empezar](#como-empezar)
 - [git add, commit, push](#git-add-commit-y-push)
-- [GitHub CLI](#github-cli)
 - [Documentación sobre placa de desarrollo](#documentación-sobre-placa-de-desarrollo)
 - [Documentación sobre modulos de Python](#documentación-sobre-modulos-de-python)
 
@@ -30,10 +29,18 @@ rpizerow@rpizerow-01.local
 
 Con esto nos logueamos con el usuario rpizerow en la RPiZeroW 01.
 
-4- Crear dentro del home de rpizerow un directorio con nuestro apellido con el comando _mkdir_ y luego entrar al mismo. Ejemplo:
+4- Si nunca lo hicimos, crear dentro del home de rpizerow un directorio con nuestro apellido con el comando _mkdir_. Ejemplo:
 
 ```bash
-mkdir gonzalez && cd gonzalez
+mkdir gonzalez
+```
+
+Si el directorio ya existe, ir al paso 5.
+
+5- Entrar al directorio, con el comando `cd`. Ejemplo:
+
+```bash
+cd gonzalez
 ```
 
 5- Clonar el fork de este repositorio con el comando a continuación reemplazando _USERNAME_ por el que corresponda.:
@@ -47,32 +54,10 @@ git clone https://github.com/USERNAME/rpizerow-labo-env.git
 6- Navegar hasta el repositorio con _cd_ y crear un entorno virtual. Sería:
 
 ```bash
-cd rpizerow-labo-env && python -m venv .rpizerow-env
+cd rpizerow-labo-env
 ```
 
-Este comando en particular toma un tiempo en resolverse.
-
-7- Activar el entorno virtual e instalar los requisitos:
-
-```bash
-source .rpizerow-env/bin/activate && python -m pip install -r requirements.txt
-```
-
-8- Ir hasta el directorio del ejercicio a resolver. Ejemplo, si quisiera resolver el ejercicio 3 de Python haría:
-
-```bash
-cd actividades_python/ej_03
-```
-
-9- Resolver el ejercicio propuesto dentro del directorio correspondiente usando el editor `nano` para escribir el código. Para abrir nano (ya estando en el directorio que corresponda) y crear un archivo pueden escribir:
-
-```bash
-nano FILENAME
-```
-
-Reemplazando _FILENAME_ por el nombre del archivo apropiado. Pueden encontrar informacion sobre los comandos basicos de nano en este [link](https://www.cheatsheet.wtf/Nano/).
-
-10- Happy coding!
+7- Seguir las instrucciones del README de las actividades que se vayan a hacer.
 
 ## git add, commit y push
 
@@ -81,7 +66,13 @@ Una vez que hayamos terminado una actividad o ejercicio, tenemos que hacer los c
 Cuando tenemos algún archivo nuevo o modificado, lo primero es agregarlo a git para que trackee los cambios:
 
 ```bash
-git add ruta_y_nombre_de_archivo
+git add archivo
+```
+
+Pueden revisar los archivos que tienen que agregar con el comando:
+
+```bash
+git status
 ```
 
 Luego, vamos a tener que especificar quién somos para que quede registrado la persona que está haciendo los cambios en el repositorio con `git config`. Ejemplo:
@@ -96,17 +87,7 @@ Después, tenemos que hacer un commit para registrar el cambio que hicimos y pro
 git commit -m "feat: programa que prende un LED rojo con boton"
 ```
 
-Cuando hayamos hecho todos los commits, vamos a seguir las instrucciones de la sección [GitHub CLI](#github-cli) para poder autorizar a la RPiZeroW para pushar a nuestro repositorio y luego hacer el push usando:
-
-```bash
-git push
-```
-
-## GitHub CLI
-
-Estas son algunas instrucciones para poder pushear a un repo personal desde la RPiZeroW.
-
-Vamos a usar [GitHub CLI](https://cli.github.com/) para facilitar el problema de la autenticacion de credenciales. Este programa ya esta instalado en todas las placas de desarrollo, puede verificarse escribiendo:
+Cuando hayamos hecho todos los commits, vamos a usar [GitHub CLI](https://cli.github.com/) para facilitar el problema de la autenticacion de credenciales. Este programa ya esta instalado en todas las placas de desarrollo, puede verificarse escribiendo:
 
 ``` bash
 gh --version
@@ -131,7 +112,13 @@ Esto nos va a solicitar algunos datos:
 - Autenticar Git con credenciales de GitHub? Si
 - Como autenticar GitHub CLI? Con token, vamos a pegar el que generamos cuando lo solicite.
 
-Una vez logueados, vamos a poder pushear nuestros cambios a repositorios personales sin inconvenientes. Cuando estemos listos para salir de la RPiZeroW, vamos a desloguearnos con:
+Una vez logueados, vamos a pushear los cambios con:
+
+```bash
+git push
+```
+
+Por ultimo, nos deslogueamos de GitHub CLI con:
 
 ```bash
 gh auth logout
