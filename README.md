@@ -12,18 +12,49 @@ Contenidos del README:
 
 2- Asegurarse de que la computadora desde donde se van a conectar esté en la **Red Alumnos**.
 
-3- Iniciar sesion en la RPiZeroW con SSH a traves de Putty o shell. El usuario y clave son `rpizerow`. En cuanto al hostname, vamos a acceder con rpizerow-0x.local donde x es el numero de la RPiZeroW que queremos usar. 
+3- Iniciar sesion en la RPiZeroW con SSH a traves de Putty, Termius o shell. El usuario y clave son `rpizerow`. En cuanto al hostname o direccion de IP y el puerto, va a depender de la RPiZeroW que queremos usar. Abajo hay una tabla con las posibles combinaciones:
+
+<table>
+	<thead>
+		<th>RPiZeroW</th>
+		<th>Direccion IP</th>
+		<th>Puerto</th>
+	</thead>
+	<tbody>
+		<tr>
+			<td>rpizerow-01</td>
+			<td rowspan=3>192.168.124.113 (consultar)</td>
+			<td>2221</td>>
+		</tr>
+		<tr>
+			<td>rpizerow-02</td>
+			<td>2222</td>
+		</tr>
+		<tr>
+			<td>rpizerow-03</td>
+			<td>2223</td>
+		</tr>
+	</tbody>
+</table>
 
 Ejemplo para SSH desde shell:
 
 ```bash
-ssh rpizerow@rpizerow-01.local
+ssh rpizerow@192.168.124.113 -p 2221
 ```
 
-Si usan Putty, solo hace falta escribir en el campo Host Name:
+Si usan Putty, se escribe IP y el puerto por separado.
+
+Campo de IP:
 
 ```
-rpizerow@rpizerow-01.local
+rpizerow@192.168.124.113
+```
+
+Campo de puerto:
+
+```
+2221
 ```
 
 Con esto nos logueamos con el usuario rpizerow en la RPiZeroW 01.
