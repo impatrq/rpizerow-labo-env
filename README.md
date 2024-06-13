@@ -24,7 +24,7 @@ Contenidos del README:
 		<tr>
 			<td>rpizerow-01</td>
 			<td rowspan=3>192.168.124.113 (consultar)</td>
-			<td>2221</td>>
+			<td>2221</td>
 		</tr>
 		<tr>
 			<td>rpizerow-02</td>
